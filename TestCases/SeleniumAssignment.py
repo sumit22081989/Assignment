@@ -38,7 +38,7 @@ class Test_SeleniumAssignment:
         input.Enter_Input()
 
     ## e) Write a test to sort the table by the amount due on page http://the-internet.herokuapp.com/tables
-    def Sort(self,setup):
+    def test_Sort(self,setup):
         self.driver = setup
         sort = Sort(setup)
         self.driver.get(sort.baseURL)
