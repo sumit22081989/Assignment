@@ -29,13 +29,13 @@ class Test_SeleniumAssignment:
         status = login.Valiate_Login()
         assert status == True, "User Credentials are incorrect"
 
-
-    def Validate_Input(self, setup):
+    #d) Write a test to enter alphabets on this and mark it as a failure if we cannot enter on page http://the-internet.herokuapp.com/inputs
+    def test_Validate_Input(self, setup):
         self.driver = setup
         input = Input(setup)
         self.driver.get(input.baseURL)
         self.driver.maximize_window()
-        input.Enter_Input()
+        assert input.Enter_Input() == True
 
     ## e) Write a test to sort the table by the amount due on page http://the-internet.herokuapp.com/tables
     def test_Sort(self,setup):
